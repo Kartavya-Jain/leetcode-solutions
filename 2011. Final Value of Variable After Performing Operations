@@ -1,0 +1,17 @@
+class Solution(object):
+    def finalValueAfterOperations(self, operations):
+        """
+        :type operations: List[str]
+        :rtype: int
+        """
+        X=0
+        i=0
+        while i<len(operations):
+            if operations[i]=="X++" or operations[i]=="++X":
+                X+=1
+                i+=1
+            else:
+                X-=1
+                i+=1
+        return  X
+        
